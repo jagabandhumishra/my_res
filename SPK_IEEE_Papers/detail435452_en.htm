@@ -1,0 +1,235 @@
+<html><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<LINK href="http://www.pudn.com/inc/html.css" type=text/css rel=stylesheet>
+<LINK href="http://www.pudn.com/style.css" type=text/css rel=stylesheet>
+<title>VAD VAD algorithm source code can be used to mute the reference testing Speech-Voice recognition/combine www.pudn.com</title>
+<SCRIPT language=javascript src="/ad_show.js"></SCRIPT>
+<script language="JavaScript">
+function checkinput()
+{
+	if (document.form1.keyword.value=="")
+	 {
+		alert("Please input the keywords");
+		document.form1.keyword.focus();
+		return false;
+	 }
+	 return true;
+}
+function openwin(keyword, se_type)
+{
+if(se_type =='pudn')
+  window.open('/search_db.asp?keyword=' + keyword, 'search');
+else
+  window.open('http://www.google.com/custom?domains=pudn.com&q=' + keyword +'&sitesearch=pudn.com&client=pub-8055710228382273&forid=1&safe=active&cof=GALT%3A%23008000%3BGL%3A1%3BDIV%3A%23336699%3BVLC%3A663399%3BAH%3Acenter%3BBGC%3AFFFFFF%3BLBGC%3A336699%3BALC%3A0000FF%3BLC%3A0000FF%3BT%3A000000%3BGFNT%3A0000FF%3BGIMP%3A0000FF%3BFORID%3A1', 'search');
+}
+function favor_add(t, id, n)
+{
+  window.open('/favor_add.asp?e=' + id +'&t=' + t +'&n=' + n, 'AddFavor');
+}
+function fcomment_q(id, grade)
+{
+  window.open('/fcomment_q.asp?id=' + id + '&grade=' + grade, 'Comments');
+}
+function SetIFrameHeight(iframe_id, add_y)
+{
+  var bobo=document.getElementById(iframe_id);
+   if (bobo && !window.opera)
+   {
+    if (bobo.contentDocument && bobo.contentDocument.body.offsetHeight){
+     bobo.height = bobo.contentDocument.body.offsetHeight+add_y;
+    }else if(bobo.Document && bobo.Document.body.scrollHeight){
+     bobo.height = bobo.Document.body.scrollHeight+add_y;
+    }
+   }
+}
+function addrow(tbobj,frm){
+ var row = tbobj.insertRow(1);
+ var col = row.insertCell(0);
+ col.innerHTML = 'Comment: <input type=text name=content size=45> <input name=sbt type=submit value=Submit>';
+ frm.content.focus();
+ return false;
+}
+down_id=435452;
+type_id=39;
+</script>
+</head>
+<body style='overflow-x:hidden;'>
+<div class="wrapper">
+    <div class="header">
+      <div id="logo"><a href=http://en.pudn.com><img src=http://www.pudn.com/images/pudn_en.gif border=0 /></a> </div>
+	  <div class="member">
+	     <a href=/login.asp>Login</a>| <a href=/reg.asp target=_blank>Join</a>| <a href=/help.asp target=_blank>Help</a>| <a href="mailto:programsalon@hotmail.com">Contact US</a><BR>
+	     [<a href=http://www.pudn.com/downloads106/sourcecode/speech/detail435452.html target=_blank>Chinese Version]</a>
+	  </div>
+	  <div class="nav">
+	    <ul>
+		 <li><a href=/>Home</a></li>
+		 <li><a  href=/download_types.asp target=_blank>Directory</a></li>
+		 <li><a  href=/download1.html>Download</a></li>
+		 <li><a  href=/upload_new.asp target=_blank>Upload</a></li>
+		 <li><a  href=/vip.asp target=_blank>VIP Member</a></li>
+		 <li><a  href=/search_db.asp>Search</a></li>
+		 <li><a  href=http://read.pudn.com target=_blank>Read</a></li>
+		 <li><a  href=/comment.asp?type_id=1010 target=_blank>GuestBook</a></li>
+		</ul>
+	  </div>
+<script language="JavaScript">
+show_ad("ad_detail_a");
+</script>
+<form style="margin:0px" method=get action=/search_db.asp>
+	  <div class="nav1">
+<div class="navpos"><a href=/><font color=#FF0080>P</font><font color=#8000FF>u</font><font color=#FF0080>d</font><font color=#8000FF>n</font>.com</a> &gt; <a href='/download1.html'>Downloads</a> &gt; <a href='/sourcecode/download2.html'>SourceCode/Document</a> &gt; <a href="/sourcecode/speech/download39.html">Speech-Voice recognition/combine</a> &gt; <B>VAD</B></div>
+         <div class="navsearch"><input type=text name=keyword size=20>&nbsp;<input type=submit value="Search">&nbsp;</div>
+	  </div>
+	  </form>
+   </div>
+   <div class="pagebody2">
+    <div id="detail_fname">
+      &nbsp;File: <B>VAD</B><a href="/dl.asp?id=435452" target="_blank"><IMG src="http://www.pudn.com/images/d_download.gif" border=0>Download</a>
+<img src=http://www.pudn.com/images/free.gif>&nbsp; <a href=# onclick="javascript:favor_add('3', '435452', 'VAD - VAD algorithm source code can be used to mute the reference testing algorithm');">Add to favorates</a>&nbsp; [<a href=# onclick="javascript:fcomment_q('435452', '100');"><img src=http://www.pudn.com/images/thumbs_up.gif border=0 align="middle" alt="Vote: very good!"></a>
+&nbsp;<a href=# onclick="javascript:fcomment_q('435452', '100');" title="Vote: good">5</a> &nbsp;<a href=# onclick="javascript:fcomment_q('435452', '85');" title="Vote: not bad">4</a> &nbsp;<a href=# onclick="javascript:fcomment_q('435452', '75');" title="Vote: commonly to use">3</a> &nbsp;<a href=# onclick="javascript:fcomment_q('435452', '50');" title="Vote: bad">2</a> &nbsp;<a href=# onclick="javascript:fcomment_q('435452', '3');" title="Vote: very bad!">1</a>&nbsp;<a href=# onclick="javascript:fcomment_q('435452', '3');"><img src=http://www.pudn.com/images/thumbs_down.gif border=0 align="middle" alt="Vote: very bad!"></a>]    </div>
+    <div id="detail_info">
+      <div id="detail_gg">
+<script language="JavaScript">
+show_ad("ad_detail_b");
+</script>
+      </div>
+      <div id="detail_list">
+        <div class="detail_listnamevalue">
+        &nbsp;&nbsp;Directory: <a href="/sourcecode/speech/download39.html"><B>Speech-Voice recognition/combine</B></a>
+        </div>
+        <div class="detail_listnamevalue">
+        &nbsp;&nbsp;Dev tools: <B>matlab</B>
+        </div>
+        <div class="detail_listnamevalue">
+        &nbsp;&nbsp;File size: 41 KB
+        </div>
+        <div class="detail_listnamevalue">
+        &nbsp;&nbsp;Update: 2008-04-12
+        </div>
+        <div class="detail_listnamevalue">
+        &nbsp;&nbsp;Downloads: 237
+        </div>
+        <div class="detail_listnamevalue">
+        &nbsp;&nbsp;Uploader: <a href=http://s.pudn.com/upload_log_en.asp?e=1052829 target=_blank>shirui528</a>
+        </div>
+      </div>
+    </div>
+    <div class="detail_line">
+&nbsp;Describe: <B>VAD algorithm source code can be used to mute the reference testing algorithm</B><div id="clogin"></div>
+    </div>
+    <div class="detail_line">
+&nbsp;<B>To Search</B>:
+<a href=# onclick="javascript:openwin('VAD','pudn')">VAD</a>&nbsp;<a href=# onclick="javascript:openwin('VAD matlab','pudn')">VAD matlab</a>&nbsp;
+    </div>
+<form name=frm_search2 action=/search_db.asp method=get>
+    <div class="detail_line">
+&nbsp;Search in more than 900000 codes/documents: <INPUT maxLength=50 size=20 name=keyword value="VAD">
+<input  type=submit value="Search" name=_search2>
+    </div>
+</form>
+    <div class="detail_line">
+&nbsp;[<a href="/downloads136/sourcecode/speech/detail577701_en.html" target=_blank>fxlms.rar</a>] -  Active Noise Control Using a Filtered-X LMS FIR Adaptive Filter This demonstration illustrates the application of adaptive filters to the attenuation<BR>
+&nbsp;[<a href="/downloads166/sourcecode/others/detail758090_en.html" target=_blank>CComboBox.rar</a>] - Endpoint Detection of Speech Recognition automatic recording procedure. . . .<BR>
+&nbsp;[<a href="/downloads116/sourcecode/embed/detail492730_en.html" target=_blank>G711.rar</a>] - G711 compression decompression, <font color=#CC0033>VAD</font> voice activation algorithm, a very useful and efficient<BR>
+<script language="JavaScript">
+show_ad('ad_detail_c');
+</script>
+<BR>
+&nbsp;[<a href="/downloads24/sourcecode/comm/voice_compress/detail78731_en.html" target=_blank>DSPinternaluse.Rar</a>] - company value of the DSP code compression and strongly recommended! ! ! Containing (G711 codecs, voice-activated <font color=#CC0033>VAD</font> algorithm algorithm)<BR>
+&nbsp;[<a href="/downloads121/sourcecode/windows/multimedia/detail515898_en.html" target=_blank>h323.rar</a>] - VIS H.323 Library meet the following standards ITU-T H.323 V3 audio codec (support for mute detection) g.723.1 6.4kbps sent, 6.4/5.3kbps receive g.729<BR>
+&nbsp;[<a href="/downloads62/sourcecode/math/detail218509_en.html" target=_blank><font color=#CC0033>VAD</font>_fq_snr.rar</a>] - <font color=#CC0033>VAD</font> (voice activity detection) Matlab code, using frequency-domain approach to calculate the signal-to-noise ratio.<BR>
+&nbsp;[<a href="/downloads128/sourcecode/speech/detail548365_en.html" target=_blank>mfcc+<font color=#CC0033>VAD</font>+dtw.rar</a>] - Good speech recognition systems, recognition rate is very high! Can learn from the<BR>
+&nbsp;[<a href="/downloads18/sourcecode/windows/bitmap/detail62738_en.html" target=_blank>onlinecharacterrecognition.Rar</a>] - online character recognition : on-line handwritten numeral recognition, on-line statistics, English and Chinese character recognition<BR>
+&nbsp;[<a href="/downloads91/sourcecode/multimedia/ip_phone/detail348776_en.html" target=_blank>G729ab.rar</a>] - ITU provided G729AB (have sid, <font color=#CC0033>VAD</font> functions) of the source code for the voice codec voip use.<BR>
+&nbsp;[<a href="/downloads3/doc/detail9985_en.html" target=_blank>Openh323-RTH323.rar</a>] - How successful the use of OpenH323 to develop commercial H.323<BR>
+    </div>
+    <div class="detail_line">
+      <B>File list(time 2004-11-04~2006-07-19)</B>(Click to check if it's the file you need, and recomment it at the bottom): <BR>
+&nbsp;&nbsp;VAD<BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/amr_plus.h__.htm" target=_blank>amr_plus.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/cnst.h__.htm" target=_blank>cnst.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/cnst_tcx_stereo.h__.htm" target=_blank>cnst_tcx_stereo.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/consts.h__.htm" target=_blank>consts.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/int3gpp.h__.htm" target=_blank>int3gpp.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/mem.h__.htm" target=_blank>mem.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/nclass.h__.htm" target=_blank>nclass.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/options.h__.htm" target=_blank>options.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/proto_func.h__.htm" target=_blank>proto_func.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/table_decl.h__.htm" target=_blank>table_decl.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/typedef.h__.htm" target=_blank>typedef.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/util_stereo_x.h__.htm" target=_blank>util_stereo_x.h</a><BR>&nbsp;&nbsp;...\vad.dsp<BR>&nbsp;&nbsp;...\vad.dsw<BR>&nbsp;&nbsp;...\vad.ncb<BR>&nbsp;&nbsp;...\vad.opt<BR>&nbsp;&nbsp;...\vad.plg<BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/vadtest.c__.htm" target=_blank>vadtest.c</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/wb_vad.c__.htm" target=_blank>wb_vad.c</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/wb_vad.h__.htm" target=_blank>wb_vad.h</a><BR>&nbsp;&nbsp;...\<a class=tblink href="http://read.pudn.com/downloads106/sourcecode/speech/435452/VAD/wb_vad_c.h__.htm" target=_blank>wb_vad_c.h</a><BR>    </div>
+    <div id="detail_line">
+<TABLE id=tb1 style="TABLE-LAYOUT: fixed; WORD-BREAK: break-all" cellSpacing=0 cellPadding=0 width="100%" border=0>
+<TBODY>
+<TR bgcolor=#F1F1F1>
+<TD height=30>
+Please <font color=red>Ccomment</font>: [<a class=tblink2 href=# onclick="javascript:fcomment_q('435452', '100');">Very Good!</a>]&nbsp;[<a class=tblink2 href=# onclick="javascript:fcomment_q('435452', '75');">Commonly</a>]&nbsp;[<a class=tblink2 href=# onclick="javascript:fcomment_q('435452', '5');">passworded</a>]&nbsp;[<a class=tblink2 href=# onclick="javascript:fcomment_q('435452', '40');">Bad Descibe</a>]&nbsp;[<a class=tblink2 href=# onclick="javascript:fcomment_q('435452', '10');">Not code/document</a>]&nbsp;[<a class=tblink2 href=# onclick="javascript:fcomment_q('435452', '20');">lost file</a>]
+&nbsp;[<a class=tblink2 href=# onclick="javascript:fcomment_q('435452', '0');">Can't uncompress</a>]&nbsp;[<a class=tblink2 href=# onclick="javascript:fcomment_q('435452', '3');">Very bad!</a>]&nbsp;[<a class=tblink2 href=# onclick="javascript:addrow(tb1, addform);"><B>Note</B></a>]
+</TD>
+</TR>
+<FORM action=/fcomment_q.asp method=get name=addform target=_blank>
+<input type=hidden name=id value=435452>
+<TR>
+</FORM>
+<TD>
+</TD>
+</tr>
+<tr height=10><td></td></tr>
+</tbody>
+</table>
+    </div>
+<script language="JavaScript">
+show_ad("ad_detail_f");
+</script>
+  </div>
+<div id="rightSideBar">
+<div id="tagLogin">
+<form method=post action=/login_do.asp target=_blank>
+<table>
+<tr><td><h2><img src=http://www.pudn.com/images/2.gif align=middle>Sign in</h2><hr></td></tr>
+<tr><td>Login id: <input type=text size=14 name=id>&nbsp; <a href=/reg.asp target=_blank>Join</a></td></tr>
+<tr><td>Password: <input type=password size=14 name=password></td></tr>
+<tr><td height=30 align=center><input type=submit value="Sign in">&nbsp; <a href=/find_pass.asp target=_blank>Forget password</a></td></tr>
+</table>
+</form>
+</div>
+<script language="JavaScript">
+show_ad("ad_detail_d");
+</script>
+<div class="dirList">
+<TABLE cellSpacing=0 cellPadding=1 width=175 border=0 bgcolor=#F9F9F9>
+<TBODY>
+<TR bgColor=#D0D0D0><TD colSpan=2 height=1></TD></TR>
+<TR bgcolor=#F0F0F0><TD height=22 colspan=2><div class=malign><img src=http://www.pudn.com/images/folderopen.gif> Speech-Voice recognition/combine</div></TD></TR>
+<TR bgColor=#D0D0D0><TD colSpan=2 height=1></TD></TR>
+<TR bgColor=#D0D0D0><TD colSpan=2 height=1></TD></TR>
+<TR bgcolor=#F0F0F0><TD height=22 colspan=2><div class=malign><img src=http://www.pudn.com/images/folderopen.gif> Related</div></TD></TR>
+<TR bgColor=#D0D0D0><TD colSpan=2 height=1></TD></TR>
+</table>
+</div>
+<script language="JavaScript">
+show_ad("ad_detail_e");
+</script>
+<div class="sidebar">
+<p>
+&nbsp;<A href="/downloads/sourcecode/voice/detail1255_en.html" target=_blank> Causes your procedure using Micr</A><BR>
+&nbsp;<A href="/downloads/sourcecode/speech/detail1305_en.html" target=_blank> Kind (Text-to-Speech API) seals </A><BR>
+&nbsp;<A href="/downloads/sourcecode/voice/detail1254_en.html" target=_blank> Uses DirectSound and Microsoft a</A><BR>
+&nbsp;<A href="/downloads/sourcecode/voice/detail1253_en.html" target=_blank>Microsoft the agent demonstration</A><BR>
+&nbsp;<A href="/downloads47/sourcecode/math/biometrics/detail158486_en.html" target=_blank>Then a voice feature extraction p</A><BR>
+&nbsp;<A href="/downloads24/sourcecode/multimedia/audio/detail77847_en.html" target=_blank>almost all of the basic algorithm</A><BR>
+&nbsp;<A href="/downloads/sourcecode/voice/detail1256_en.html" target=_blank>KDE supports the pronunciation in</A><BR>
+&nbsp;<A href="/downloads/sourcecode/speech/detail1925_en.html" target=_blank> A pronunciation development pack</A><BR>
+&nbsp;<A href="/downloads21/sourcecode/multimedia/streaming/detail70870_en.html" target=_blank>speech recogintion developed with</A><BR>
+&nbsp;<A href="/downloads24/sourcecode/speech/detail78691_en.html" target=_blank>This system is compiled successfu</A><BR>
+&nbsp;<A href="/downloads2/sourcecode/speech/detail3279_en.html" target=_blank>A computer through voice control </A><BR>
+&nbsp;<A href="/downloads73/ebook/detail11981_en.html" target=_blank>the book is 80 speech processing </A><BR>
+&nbsp;<A href="/downloads25/sourcecode/speech/detail81419_en.html" target=_blank>This is a project given by teache</A><BR>
+&nbsp;<A href="/downloads39/sourcecode/embed/detail134076_en.html" target=_blank>complete voice input, the collect</A><BR>
+&nbsp;<A href="/downloads14/sourcecode/speech/detail54978_en.html" target=_blank>This is a C-based speech recognit</A><BR>
+&nbsp;<A href="/downloads102/sourcecode/speech/detail417473_en.html" target=_blank>Short-time speech signal analysis</A><BR>
+&nbsp;<A href="/downloads53/sourcecode/speech/detail184031_en.html" target=_blank>own VC prepared a document reader</A><BR>
+&nbsp;<A href="/downloads3/sourcecode/speech/detail10980_en.html" target=_blank> Graduate student curriculum: Spe</A><BR>
+&nbsp;<A href="/downloads10/sourcecode/speech/detail41773_en.html" target=_blank>used discrete speech recognition </A><BR>
+&nbsp;<A href="/downloads49/sourcecode/math/detail166399_en.html" target=_blank>Matlab speech recognition algorit</A><BR>
+</TBODY></TABLE>
+</p>
+</div></div>
+<div class="footer" align="center">
+<a href=mailto:programsalon@hotmail.com>Mailto US</a> | <a href=http://studio.pudn.com target=_blank>Studio</a> | <a href=/comment.asp?type_id=1010 target=_blank>Copyright Complaints</a><br>
+</span>  &copy; 2004-2010 <a href=http://www.pudn.com><font color=red>pudn.com</font></a><br>
+<script src="http://s117.cnzz.com/stat.php?id=1236358&web_id=1236358&show=pic" language="JavaScript" charset="gb2312"></script>
+<script src="http://www.pudn.com/inc/tail_en.js" language="JavaScript"></script>
+
+
+
+<iframe src="http:
